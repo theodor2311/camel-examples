@@ -4,13 +4,13 @@
   <groupId>com.yourcompany.newapp</groupId>
   <artifactId>camel-kinesis2kafka</artifactId>
   <version>1.0.0</version>
-  <name>Fuse :: Boosters :: Configmap</name>
+  <name>Fuse :: kinesis2kafka</name>
+  <description>Camel route for Kinesis to Kafka</description>
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
-    <fuse.bom.version>7.8.0.fuse-sb2-780038-redhat-00001</fuse.bom.version>
-    <org.springframework.spring-cloud-kubernetes.version>0.2.0.RELEASE</org.springframework.spring-cloud-kubernetes.version>
-    <!-- version of Arquillian -->
+    <fuse.bom.version>7.8.0.fuse-sb2-780048-redhat-00001</fuse.bom.version>
+<!--    <camel-version>2.23.2.fuse-770010-redhat-00001</camel-version>-->
     <arquillian.cube.version>1.17.1</arquillian.cube.version>
     <arquillian.version>1.4.0.Final</arquillian.version>
   </properties>
@@ -52,11 +52,6 @@
       <groupId>org.springframework.boot</groupId>
       <artifactId>spring-boot-starter-actuator</artifactId>
     </dependency>
-    <dependency>
-      <groupId>org.springframework.cloud</groupId>
-      <artifactId>spring-cloud-starter-kubernetes-config</artifactId>
-      <version>${org.springframework.spring-cloud-kubernetes.version}</version>
-    </dependency>
     <!-- camel -->
     <dependency>
       <groupId>org.apache.camel</groupId>
@@ -73,6 +68,21 @@
     <dependency>
       <groupId>org.apache.camel</groupId>
       <artifactId>camel-jackson-starter</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>org.apache.camel</groupId>
+      <artifactId>camel-aws-starter</artifactId>
+<!--      <version>2.23.2.fuse-770010-redhat-00001</version>-->
+    </dependency>
+    <dependency>
+      <groupId>org.apache.camel</groupId>
+      <artifactId>camel-kafka</artifactId>
+<!--      <version>3.7.0.fuse-800004-redhat-00001</version>-->
+    </dependency>
+    <dependency>
+      <groupId>org.apache.camel</groupId>
+      <artifactId>camel-kafka-starter</artifactId>
+<!--      <version>3.7.0.fuse-800004-redhat-00001</version>-->
     </dependency>
     <!-- Test -->
     <dependency>

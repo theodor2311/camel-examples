@@ -13,19 +13,20 @@
  *  implied.  See the License for the specific language governing
  *  permissions and limitations under the License.
  */
-package com.redhat.fuse.boosters.configmap;
+package com.redhat.fuse.kinesis2kafka;
 
-/**
- * Service interface for name service.
- * 
- */
-public interface GreetingsService {
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+
+@SpringBootApplication
+public class Application {
 
     /**
-     * Generate Greetings
-     *
-     * @return a string greetings
+     * Main method to start the application.
      */
-    Greetings getGreetings( String name);
+    public static void main(String[] args) {
+
+        SpringApplication.run(Application.class, args);
+    }
 
 }
