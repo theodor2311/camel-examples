@@ -2,3 +2,5 @@
 *.iml
 .vscode/
 test/
+camel-mllp2kafka/
+camel-paho2kafka
