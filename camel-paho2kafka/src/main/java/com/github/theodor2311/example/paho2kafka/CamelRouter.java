@@ -9,7 +9,7 @@ public class CamelRouter extends RouteBuilder {
     @Override
     public void configure() throws Exception {
 
-        from("paho:{{camel.component.paho.topic}}?qos={{camel.component.paho.qos}}&userName={{camel.component.paho.userName}}&password={{camel.component.paho.password}}&connectOptions=#mqtt_options")
+        from("paho:{{camel.component.paho.topic}}?qos={{camel.component.paho.qos}}&connectOptions=#mqtt_options")
                 .to("direct:toKafka")
                 ;
 

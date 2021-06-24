@@ -11,6 +11,10 @@ public class Application {
 
     @Value("${camel.component.paho.serverURIs}")
     private String[] serverURIs;
+    @Value("${camel.component.paho.userName}")
+    private String userName;
+    @Value("${camel.component.paho.password}")
+    private String password;
 
     public static void main(String[] args) {
         SpringApplication.run(Application.class, args);
@@ -20,6 +24,8 @@ public class Application {
     public MqttConnectOptions mqttConnectOptions(){
         MqttConnectOptions mqttConnectOptions = new MqttConnectOptions();
         mqttConnectOptions.setServerURIs (serverURIs);
+        mqttConnectOptions.setUserName(userName);
+        mqttConnectOptions.setPassword(password.toCharArray());
         return mqttConnectOptions;
     }
 
