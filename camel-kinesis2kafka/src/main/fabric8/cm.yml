@@ -1,6 +1,0 @@
-apiVersion: v1
-kind: ConfigMap
-metadata:
-  name: fuse-configmap-booster
-data:
-  booster.nameToGreet: default

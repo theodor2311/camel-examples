@@ -1,1 +1,0 @@
-= Camel Route Example - Kinesis to Kafka
